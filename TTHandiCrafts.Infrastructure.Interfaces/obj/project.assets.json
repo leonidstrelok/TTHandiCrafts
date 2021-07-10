@@ -543,39 +543,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leoni\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {}
+    "C:\\Users\\Bahtiyar\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Infrastructure.Interfaces\\TTHandiCrafts.Infrastructure.Interfaces.csproj",
+      "projectUniqueName": "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Infrastructure.Interfaces\\TTHandiCrafts.Infrastructure.Interfaces.csproj",
       "projectName": "TTHandiCrafts.Infrastructure.Interfaces",
-      "projectPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Infrastructure.Interfaces\\TTHandiCrafts.Infrastructure.Interfaces.csproj",
-      "packagesPath": "C:\\Users\\leoni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Infrastructure.Interfaces\\obj\\",
+      "projectPath": "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Infrastructure.Interfaces\\TTHandiCrafts.Infrastructure.Interfaces.csproj",
+      "packagesPath": "C:\\Users\\Bahtiyar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Infrastructure.Interfaces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\leoni\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Bahtiyar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\Bahtiyar\\source\\package": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj": {
-              "projectPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj"
+            "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj": {
+              "projectPath": "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj"
             }
           }
         }
