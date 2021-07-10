@@ -37,8 +37,4 @@
       </Compile>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Persistences\Configurations" />
-    </ItemGroup>
-
 </Project>

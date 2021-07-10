@@ -9,6 +9,7 @@ using TTHandiCrafts.Models.Models;
 using TTHandiCrafts.Models.Models.Products;
 using TTHandiCrafts.Models.Models.Products.Enums;
 using TTHandiCrafts.UseCases.Modules.Products.Dtos;
+using TTHandiCrafts.Utils;
 
 namespace TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct
 {
@@ -34,6 +35,8 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct
             {
                 product = mapper.Map<ModernProduct>(request);
             }
+
+            product.CreatedDate = SystemTime.Now();
 
 
             await LoadDocument(request);
@@ -61,9 +64,7 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct
                     binarysData.Add(new BinaryData()
                     {
                         Image = ms.ToArray(),
-                        FileName = versionFile.FileName,
-                        CategoryType = request.CategoryType,
-                        ProductType = request.ProductType
+                        FileName = versionFile.FileName
                     });
                 }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TTHandiCrafts.Models.Models.BaseModels;
 using TTHandiCrafts.Models.Models.Products.Enums;
@@ -5,13 +6,14 @@ using TTHandiCrafts.Models.Models.UserModels;
 
 namespace TTHandiCrafts.Models.Models.Products
 {
-    public abstract class Product : BaseEntity
+    public class Product : BaseEntity
     {
         /// <summary>
         /// Наименование продукта
         /// </summary>
         public string Name { get; set; }
 
+        public DateTime CreatedDate { get; set; }
         /// <summary>
         /// Нужно ли изготовить 
         /// </summary>

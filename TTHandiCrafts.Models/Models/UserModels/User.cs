@@ -8,7 +8,7 @@ namespace TTHandiCrafts.Models.Models.UserModels
     /// <summary>
     /// Пользователь
     /// </summary>
-    public abstract class User : BaseEntity
+    public class User : BaseEntity
     {
         /// <summary>
         /// Имя
@@ -36,8 +36,12 @@ namespace TTHandiCrafts.Models.Models.UserModels
         public byte[]? Image { get; set; }
 
         /// <summary>
-        /// Контактные данные 
+        /// Телефонный номер
         /// </summary>
-        public virtual ICollection<Contact> Contacts { get; set; }
+        public string Phone { get; set; }
+        /// <summary>
+        /// Почта
+        /// </summary>
+        public string Email { get; set; }
     }
 }

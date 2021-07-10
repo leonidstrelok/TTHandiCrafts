@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using FluentValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors.Infrastructure;
@@ -22,11 +21,13 @@ namespace TTHandiCrafts
     public class Startup
     {
         private const string AllowedDomainsCorsPolicy = "AllowedDomains";
+
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
             Env = env;
         }
+
         private IWebHostEnvironment Env { get; }
         public IConfiguration Configuration { get; }
 
@@ -35,34 +36,29 @@ namespace TTHandiCrafts
         {
             services.AddControllers()
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
-            
-            
+
+
             services
                 .AddTTHandiCraftsUseCases()
                 .AddTTHandiCraftsInfrastructure(Configuration)
                 .AddTTHandiCraftsRequestLocalization()
                 .AddTTHandiCraftsSwagger();
-            
+
             services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
             services.AddHttpContextAccessor();
             services.AddScoped<ICurrentUserService, CurrentUserService>();
             services.AddScoped<IEmailSender, MailKitEmailSender>();
             services.Configure<EmailOptions>(Configuration.GetSection("EmailOptions"));
-            
+
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-            
-            
+
+
             services.Configure<IdentityOptions>(Configuration.GetSection("IdentityOptions"));
-            
+
             services.AddCors(ConfigureCors);
-            
-            
+
+
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
-            
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "TTHandiCrafts", Version = "v1"});
-            });
         }
 
 
@@ -79,23 +75,17 @@ namespace TTHandiCrafts
                 app.UseExceptionHandler("/error-production");
                 app.UseForwardedHeaders();
             }
-            
+
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-            
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TDS v1");
-                c.EnableFilter();
-            });
 
+            app.UseSwaggerTTHandiCrafts();
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            
+
             app.UseCors(AllowedDomainsCorsPolicy);
-            
+
             app.UseRequestLocalization();
 
             app.UseAuthentication();
@@ -107,21 +97,18 @@ namespace TTHandiCrafts
                 endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
-            
+
             app.UseSpa(spa => { spa.Options.SourcePath = "ClientApp"; });
         }
-        
+
         private void ConfigureCors(CorsOptions options)
         {
-            options.AddPolicy(AllowedDomainsCorsPolicy, builder =>
-            {
-                var tokenValidIssuers = new List<string>(Configuration
-                    .GetSection("IdentityServer:TokenValidationParameters:ValidIssuers").Get<string[]>());
-                if (Env.IsDevelopment()) tokenValidIssuers.Add("http://localhost:3000");
-
-                builder.WithOrigins(tokenValidIssuers.ToArray()).AllowAnyMethod().AllowAnyHeader().AllowCredentials();
-            });
+            options.AddPolicy(AllowedDomainsCorsPolicy,
+                builder =>
+                {
+                    builder.WithOrigins(new[] {"http://localhost:3000"}).AllowAnyMethod().AllowAnyHeader()
+                        .AllowCredentials();
+                });
         }
-
     }
 }

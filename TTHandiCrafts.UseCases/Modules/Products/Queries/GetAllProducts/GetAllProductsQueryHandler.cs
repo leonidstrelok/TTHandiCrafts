@@ -24,7 +24,7 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Queries.GetAllProducts
 
         public async Task<IEnumerable<ProductDto>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
-            return await Task.FromResult(dbContext.Set<Product>().Where(p => p.ProductType == request.ProductType && p.CategoryType == request.CategoryType ).ProjectTo<ProductDto>(mapper.ConfigurationProvider));
+            return await Task.FromResult(dbContext.Set<Product>().ProjectTo<ProductDto>(mapper.ConfigurationProvider));
         }
     }
 }

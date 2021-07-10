@@ -28,6 +28,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\TTHandiCrafts.Infrastructure.Interfaces\TTHandiCrafts.Infrastructure.Interfaces.csproj" />
+      <ProjectReference Include="..\TTHandiCrafts.Utils\TTHandiCrafts.Utils.csproj" />
     </ItemGroup>
 
 </Project>

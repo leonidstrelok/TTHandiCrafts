@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TTHandiCrafts</name>
+    </assembly>
+    <members>
+        <member name="T:TTHandiCrafts.Controllers.SharedControllers.AccountControllers.AccountController">
+            <summary>
+            Контроллер для авторизации и регистрации
+            </summary>
+        </member>
+        <member name="M:TTHandiCrafts.Controllers.WebControllers.ProductController.GetAllProducts(TTHandiCrafts.Infrastructure.DevExpress.Options.DataSourceLoadOptions)">
+            <summary>
+            Получение всех изделий
+            </summary>
+            <param name="loadOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TTHandiCrafts.Controllers.WebControllers.ProductController.CreateProduct(TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct.CreateProductCommand)">
+            <summary>
+            Добавления нового изделия
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TTHandiCrafts.Controllers.WebControllers.ProductController.UpdateProduct(System.Int32,TTHandiCrafts.UseCases.Modules.Products.Commands.UpdateProduct.UpdateProductCommand)">
+            <summary>
+            Обновление изделия
+            </summary>
+            <param name="id"></param>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TTHandiCrafts.Controllers.WebControllers.ProductController.DeleteProduct(System.Int32)">
+            <summary>
+            Удаление изделия
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TTHandiCrafts.Data.IdentityDataSeeder.CreateIdentityUser(System.String,System.String)">
+            <summary>
+            Создание пользователя для авторизации
+            </summary>
+            <param name="name"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TTHandiCrafts.Program.LoadProductionConfigs(Microsoft.Extensions.Configuration.IConfigurationBuilder)">
+            <summary>
+            Загрузка файлов конфигурации для докера.
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:TTHandiCrafts.Program.IdentityDataSeeder(Microsoft.Extensions.DependencyInjection.IServiceScope)">
+            <summary>
+            Создание системного пользователя и добавление системных ролей
+            </summary>
+            <param name="scope"></param>
+        </member>
+        <member name="M:TTHandiCrafts.Program.MigrateData(Microsoft.Extensions.DependencyInjection.IServiceScope)">
+            <summary>
+            Миграция всех данных при запуске приложения
+            </summary>
+            <param name="scope"></param>
+        </member>
+    </members>
+</doc>

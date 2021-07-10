@@ -1,8 +1,13 @@
+using System.Reflection.Metadata;
 using TTHandiCrafts.Models.Models.BaseModels;
+using TTHandiCrafts.Models.Models.Products;
 using TTHandiCrafts.Models.Models.Products.Enums;
 
 namespace TTHandiCrafts.Models.Models
 {
+    /// <summary>
+    /// Данные для хранения фотографий
+    /// </summary>
     public class BinaryData : BaseEntity
     {
         /// <summary>
@@ -10,15 +15,12 @@ namespace TTHandiCrafts.Models.Models
         /// </summary>
         public byte[] Image { get; set; }
 
-        /// <summary>
-        /// Тип продукта
-        /// </summary>
-        public ProductType ProductType { get; set; }
+        public int ProductId { get; set; }
 
         /// <summary>
-        /// Категория продукта
+        /// Идентификатор продукта
         /// </summary>
-        public CategoryType CategoryType { get; set; }
+        public virtual Product Product { get; set; }
 
         /// <summary>
         /// Наименование файла
