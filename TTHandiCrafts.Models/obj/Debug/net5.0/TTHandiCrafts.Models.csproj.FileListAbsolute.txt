@@ -10,3 +10,15 @@ C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Models\obj\Debug\net5.0
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Models\obj\Debug\net5.0\ref\TTHandiCrafts.Models.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.pdb
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\bin\Debug\net5.0\TTHandiCrafts.Models.deps.json
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\bin\Debug\net5.0\TTHandiCrafts.Models.dll
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\bin\Debug\net5.0\ref\TTHandiCrafts.Models.dll
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\bin\Debug\net5.0\TTHandiCrafts.Models.pdb
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.csproj.AssemblyReference.cache
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.AssemblyInfoInputs.cache
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.AssemblyInfo.cs
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.csproj.CoreCompileInputs.cache
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.dll
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\obj\Debug\net5.0\ref\TTHandiCrafts.Models.dll
+C:\Users\Bahtiyar\Source\Repos\CyberCats\TTHandiCrafts.Models\obj\Debug\net5.0\TTHandiCrafts.Models.pdb

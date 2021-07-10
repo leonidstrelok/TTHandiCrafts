@@ -1,0 +1,10 @@
+﻿@model string
+
+@if (!String.IsNullOrEmpty(Model))
+{
+    <div class="alert done">
+        <div class='pop-block'>
+            <p>@Model</p>
+        </div>
+    </div>
+}

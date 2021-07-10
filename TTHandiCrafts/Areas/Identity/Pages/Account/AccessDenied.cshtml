@@ -1,0 +1,8 @@
+﻿@page
+@model AccessDeniedModel
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["Elýeterlik gadagan"].Value;
+}
+
+<p class="text-danger">@Localizer["Sizde bu çeşmä giriş ýok, administratora ýüz tutuň"]</p>

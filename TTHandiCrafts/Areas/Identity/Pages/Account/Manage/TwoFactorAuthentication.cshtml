@@ -1,0 +1,58 @@
+﻿@page
+@model TwoFactorAuthenticationModel
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["Iki faktorly hasaba alyş"].Value;
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h4>@ViewData["Title"]</h4>
+@if (Model.Is2faEnabled)
+{
+    if (Model.RecoveryCodesLeft == 0)
+    {
+        <div class="alert error">
+            <strong>@Localizer["Sizde dikeldiş kody ýok"]</strong>
+            <p>@Localizer["Siz berjaý etmeli"] <a asp-page="./GenerateRecoveryCodes">@Localizer["Täze dikeldiş kodlarynyň toplumyny döretmek"]</a> @Localizer["ulgama dikeldiş kody bilen girmezden öň"]</p>
+        </div>
+    }
+    else if (Model.RecoveryCodesLeft == 1)
+    {
+        <div class="alert error">
+            <strong>@Localizer["Sizde diňe 1 dikeldiş kody bar"]</strong>
+            <p>@Localizer["Siz üçin mümkin"]<a asp-page="./GenerateRecoveryCodes">@Localizer["Täze dikeldiş kodlarynyň toplumyny döretmek"]</a>.</p>
+        </div>
+    }
+    else if (Model.RecoveryCodesLeft <= 3)
+    {
+        <div class="alert warning">
+            <strong>@Localizer["Sizde galan"] @Model.RecoveryCodesLeft @Localizer["Dikeldiş kodlary"].</strong>
+            <p>@Localizer["Siz berjaý etmeli"] <a asp-page="./GenerateRecoveryCodes">@Localizer["Täze dikeldiş kodlarynyň toplumyny döretmek"]</a>.</p>
+        </div>
+    }
+
+    if (Model.IsMachineRemembered)
+    {
+        <form method="post" style="display: inline-block">
+            <button type="submit" class="btn btn-primary">@Localizer["Şu brauzeri ýatdan çykar"]</button>
+        </form>
+    }
+    <a asp-page="./Disable2fa" class="btn btn-primary">@Localizer["2FA öçürmeli"]</a>
+    <a asp-page="./GenerateRecoveryCodes" class="btn btn-primary">@Localizer["Dikeldiş kodlaryny ýatyrmak"]</a>
+}
+
+<h5>@Localizer["Hasaba alyş goşundysy"]</h5>
+@if (!Model.HasAuthenticator)
+{
+    <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">@Localizer["Hasaba almak üçin goşundyny goşmak"]</a>
+}
+else
+{
+    <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">@Localizer["Hasaba almak üçin goşundyny gurnamak"]</a>
+    <a id="reset-authenticator" asp-page="./ResetAuthenticator" class="btn btn-primary">@Localizer["Hasaba almak üçin goşundyny ýatyrmak"]</a>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

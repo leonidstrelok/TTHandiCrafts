@@ -1,0 +1,22 @@
+﻿@inject IViewLocalizer Localizer
+@inject IConfiguration config
+@{
+    Layout = "~/Pages/Shared/_LayoutManage.cshtml";
+    ViewData["Title"] = Localizer["Akkauntyň sazlamalaryny dolandyrmak"];
+}
+
+<div class="settings__main">
+    <div class="left__bar">
+        <partial name="_ManageNav" />
+        <a class="button__back" href="/">@Localizer["Yza"]</a>
+
+    </div>
+    <div class="right__bar"  style="padding-left:20px;">
+        @RenderBody()
+    </div>
+    <a class="button__back_mobile" href="/">@Localizer["Yza"]</a>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

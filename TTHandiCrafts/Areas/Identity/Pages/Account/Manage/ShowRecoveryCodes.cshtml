@@ -1,0 +1,24 @@
+﻿@page
+@model ShowRecoveryCodesModel
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["Dikeldiş kodlary"];
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication; ;
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h4>@ViewData["Title"]</h4>
+<div class="alert warning" role="alert">
+    <p>
+        <strong>@Localizer["Şu kodlary howpsuz ýerde saklaň"].</strong>
+    </p>
+    <p>
+        @Localizer["Eger siz öz enjamyňyzy ýitirip, dikeldiş kodlaryňyz bolmasa, onda öz akkauntyňyza girişden mahrum bolarsyňyz"].
+    </p>
+</div>
+<div>
+    @for (var row = 0; row < Model.RecoveryCodes.Length; row += 2)
+    {
+        <code class="recovery-code" id="qr-txt">@Model.RecoveryCodes[row]</code><text>&nbsp;</text><code class="recovery-code">@Model.RecoveryCodes[row + 1]</code><br />
+    }
+</div>

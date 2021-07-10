@@ -1,0 +1,36 @@
+﻿@page
+@model LoginWith2faModel
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["Iki faktorly hasaba almak"];
+    string ErrorClass = ModelState.IsValid ? string.Empty : "error";
+}
+
+@section SubTitle{
+    @await Html.PartialAsync("_PageSubTitle", Localizer["Hasaba alyş authenticator goşundysy arkaly goralandyr"])
+}
+
+<form method="post">
+    <div class="authorization__field">
+        <div asp-validation-summary="All" style="color:red;" class="error"></div>
+        <div class="authorization__log">
+            <div class="password-group @ErrorClass">
+                <input asp-for="Input.TwoFactorCode" class="inpt" required placeholder="@Localizer["Autentifikatoryň kody"]">
+            </div>
+            <input asp-for="Input.RememberMachine" type="checkbox" id="rememberMe">
+            <label class="checked" for="rememberMe">@Localizer["Bu enjam ýatda saklaň"]</label>
+            <div class="authorization__button">
+                <input type="submit" id="submit" value="@Localizer["Hasaba alyş"]" class="column button active">
+            </div>
+        </div>
+    </div>
+</form>
+
+<p>
+    @Localizer["Siz hasaba alyş gurluşyna girip bilmeýärsiňiz?"]
+    <a id="recovery-code-login" asp-page="./LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">@Localizer["Ulgama dikeldiş kody bilen giriň"]</a>.
+</p>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

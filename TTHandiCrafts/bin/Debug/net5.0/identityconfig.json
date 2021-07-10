@@ -1,4 +1,5 @@
 {
+  
   "IdentityOptions": {
     "Lockout": {
       "MaxFailedAccessAttempts": 10,

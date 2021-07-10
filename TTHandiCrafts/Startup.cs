@@ -54,15 +54,15 @@ namespace TTHandiCrafts
             
             services.Configure<IdentityOptions>(Configuration.GetSection("IdentityOptions"));
             
-            services.AddCors(ConfigureCors);
+            //services.AddCors(ConfigureCors);
             
             
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
-            
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "TTHandiCrafts", Version = "v1"});
-            });
+
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "TTHandiCrafts", Version = "v1" });
+            //});
         }
 
 
