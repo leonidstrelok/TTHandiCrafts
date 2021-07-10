@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TTHandiCrafts.Models.Models.BaseModels;
 using TTHandiCrafts.Models.Models.Products.Enums;
+using TTHandiCrafts.Models.Models.UserModels;
 
 namespace TTHandiCrafts.Models.Models.Products
 {
@@ -35,5 +36,17 @@ namespace TTHandiCrafts.Models.Models.Products
         /// Тип изделия
         /// </summary>
         public ProductType ProductType { get; set; }
+
+        /// <summary>
+        /// Избранное
+        /// </summary>
+        public bool IsFavorites { get; set; }
+
+        public int? MemberId { get; set; }
+
+        /// <summary>
+        /// Сотрудник
+        /// </summary>
+        public virtual Member Member { get; set; }
     }
 }

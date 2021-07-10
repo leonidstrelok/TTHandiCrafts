@@ -7,13 +7,6 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Queries.GetAllProducts
 {
     public class GetAllProductsQuery : IRequest<IEnumerable<ProductDto>>
     {
-        public CategoryType CategoryType { get; }
-        public ProductType ProductType { get; }
-
-        public GetAllProductsQuery(CategoryType categoryType, ProductType productType)
-        {
-            CategoryType = categoryType;
-            ProductType = productType;
-        }
+        
     }
 }

@@ -26,48 +26,6 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct
         public async Task<ProductDto> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
             Product product = default;
-            product = CastingToType(request);
-
-            await LoadDocument(request, product);
-            
-            await dbContext.AddAsync(product);
-            await dbContext.SaveChangesAsync();
-            return mapper.Map<ProductDto>(product);
-        }
-
-       
-
-        private async Task LoadDocument(CreateProductCommand request, Product product)
-        {
-            if (request.Images != null)
-            {
-                var binarysData = new List<Product>();
-                foreach (var versionFile in request.Images)
-                {
-                    Stream document = versionFile.Stream;
-                    document.Position = 0;
-
-                    using var ms = new MemoryStream();
-                    await document.CopyToAsync(ms);
-                    
-                    product = CastingToType(request);
-                    
-                    binarysData.Add(product
-                    {
-                        Image = ms.ToArray(),
-                        FileName = versionFile.FileName,
-                        DocumentType = binaryData.DocumentType
-                    });
-                }
-
-                await dbContext.Set<BinaryData>().AddRangeAsync(binarysData);
-                await dbContext.SaveChangesAsync();
-            }
-        }
-        
-        private Product CastingToType(CreateProductCommand request)
-        {
-            Product product;
             if (request.CategoryType == CategoryType.Traditional)
             {
                 product = mapper.Map<TraditionalProduct>(request);
@@ -77,7 +35,42 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct
                 product = mapper.Map<ModernProduct>(request);
             }
 
-            return product;
+
+            await LoadDocument(request);
+            
+            await dbContext.AddAsync(product);
+            await dbContext.SaveChangesAsync();
+            return mapper.Map<ProductDto>(product);
         }
+
+       
+
+        private async Task LoadDocument(CreateProductCommand request)
+        {
+            if (request.Images != null)
+            {
+                var binarysData = new List<BinaryData>();
+                foreach (var versionFile in request.Images)
+                {
+                    Stream document = versionFile.Stream;
+                    document.Position = 0;
+
+                    using var ms = new MemoryStream();
+                    await document.CopyToAsync(ms);
+                    
+                    binarysData.Add(new BinaryData()
+                    {
+                        Image = ms.ToArray(),
+                        FileName = versionFile.FileName,
+                        CategoryType = request.CategoryType,
+                        ProductType = request.ProductType
+                    });
+                }
+
+                await dbContext.Set<BinaryData>().AddRangeAsync(binarysData);
+                await dbContext.SaveChangesAsync();
+            }
+        }
+        
     }
 }

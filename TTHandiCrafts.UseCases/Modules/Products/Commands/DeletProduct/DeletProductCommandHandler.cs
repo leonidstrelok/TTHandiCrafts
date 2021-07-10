@@ -13,12 +13,10 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Commands.DeletProduct
     public class DeletProductCommandHandler : AsyncRequestHandler<DeletProductCommand>
     {
         private readonly IApplicationDbContext dbContext;
-        private readonly ICurrentUserService currentUserService;
 
-        public DeletProductCommandHandler(IApplicationDbContext dbContext, ICurrentUserService currentUserService)
+        public DeletProductCommandHandler(IApplicationDbContext dbContext)
         {
             this.dbContext = dbContext;
-            this.currentUserService = currentUserService;
         }
 
         protected override async Task Handle(DeletProductCommand request, CancellationToken cancellationToken)
