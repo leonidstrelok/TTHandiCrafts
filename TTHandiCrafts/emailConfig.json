@@ -1,0 +1,9 @@
+{
+  "EmailOptions": {
+    "Sender": "Sender",
+    "SmtpServer": "smtp.mail.ru",
+    "Port": 465,
+    "Username": "userName",
+    "Password": "Pass"
+  }
+}

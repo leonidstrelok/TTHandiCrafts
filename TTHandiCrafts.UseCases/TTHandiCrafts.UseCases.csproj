@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+        <PackageReference Include="FluentValidation" Version="10.0.1" />
+        <PackageReference Include="MediatR" Version="9.0.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.5" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="MappingProfilesBase" />
+      <Folder Include="Modules\Accounts\Commands" />
+      <Folder Include="Modules\Accounts\Models" />
+      <Folder Include="Modules\Accounts\Queries" />
+      <Folder Include="Modules\Products\Commands\UpdateProduct" />
+      <Folder Include="Modules\Products\Models" />
+      <Folder Include="Modules\Products\Queries" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TTHandiCrafts.Infrastructure.Interfaces\TTHandiCrafts.Infrastructure.Interfaces.csproj" />
+    </ItemGroup>
+
+</Project>

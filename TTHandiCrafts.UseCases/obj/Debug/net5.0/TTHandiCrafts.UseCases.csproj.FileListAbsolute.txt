@@ -1,0 +1,17 @@
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.UseCases.deps.json
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.UseCases.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\ref\TTHandiCrafts.UseCases.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.UseCases.pdb
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Infrastructure.Interfaces.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Models.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Infrastructure.Interfaces.pdb
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Models.pdb
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.csproj.AssemblyReference.cache
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.AssemblyInfoInputs.cache
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.AssemblyInfo.cs
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.csproj.CoreCompileInputs.cache
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.csproj.CopyComplete
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\ref\TTHandiCrafts.UseCases.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.pdb

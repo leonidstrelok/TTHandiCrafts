@@ -1,0 +1,12 @@
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\bin\Debug\net5.0\TTHandiCrafts.Utils.deps.json
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\bin\Debug\net5.0\TTHandiCrafts.Utils.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\bin\Debug\net5.0\ref\TTHandiCrafts.Utils.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\bin\Debug\net5.0\TTHandiCrafts.Utils.pdb
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\obj\Debug\net5.0\TTHandiCrafts.Utils.csproj.AssemblyReference.cache
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\obj\Debug\net5.0\TTHandiCrafts.Utils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\obj\Debug\net5.0\TTHandiCrafts.Utils.AssemblyInfoInputs.cache
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\obj\Debug\net5.0\TTHandiCrafts.Utils.AssemblyInfo.cs
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\obj\Debug\net5.0\TTHandiCrafts.Utils.csproj.CoreCompileInputs.cache
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\obj\Debug\net5.0\TTHandiCrafts.Utils.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\obj\Debug\net5.0\ref\TTHandiCrafts.Utils.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Utils\obj\Debug\net5.0\TTHandiCrafts.Utils.pdb

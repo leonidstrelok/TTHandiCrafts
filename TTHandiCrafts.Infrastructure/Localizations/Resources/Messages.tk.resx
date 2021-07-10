@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="SK_CascadeDependencyError" xml:space="preserve">
+        <value>Garaşly maglumatlary işlemekde ýalňyşlyk. Dogry doldurylandygyny barlaň</value>
+    </data>
+    <data name="SK_CircularNesting" xml:space="preserve">
+        <value>Sirkulýar mazmun anyklandy. Dogry doldurylandygyny barlaň.</value>
+    </data>
+    <data name="SK_EntityWithKeyDoesNotExists" xml:space="preserve">
+        <value>Maglumatlaryň dogrulygyny balaň.</value>
+    </data>
+    <data name="SK_HasOneOreMoreDependencies" xml:space="preserve">
+        <value>Ýazgy eýýäm ulanýandygy sebäpli pozmak mümkin dal.</value>
+    </data>
+    <data name="SK_ValueAlreadyExists" xml:space="preserve">
+        <value>Baha öňden bar</value>
+    </data>
+    <data name="AK_CountryCannotBeEmpty" xml:space="preserve">
+        <value>Ýurt boş bolup bilmez</value>
+    </data>
+    <data name="AK_CompanyCannotBeEmpty" xml:space="preserve">
+        <value>Kompaniýa boş bolup bilmez</value>
+    </data>
+    <data name="AK_CodyCannotBeEmpty" xml:space="preserve">
+        <value>Kod boş bolup bilmez</value>
+    </data>
+    <data name="AK_NameOfCertificationOrganizationCannotBeEmpty" xml:space="preserve">
+        <value>Sertifisirleme bölümiň ady boş bolup bilmez</value>
+    </data>
+    <data name="AK_NumberCannotBeEmtpy" xml:space="preserve">
+        <value>Belgi boş bolup bilmez</value>
+    </data>
+    <data name="AK_ProductCannotBeEmpty" xml:space="preserve">
+        <value>Önüm boş bolup bilmez</value>
+    </data>
+    <data name="AK_RegulationCannotBeEmpty" xml:space="preserve">
+        <value>Delilnama boş bolup bilmez</value>
+    </data>
+    <data name="SSDK_ApplicationIdCannotBeEmpty" xml:space="preserve">
+        <value>Arzanyň belgisi boş bolup bilmez</value>
+    </data>
+    <data name="SSDK_SamplesCannotBeEmpty" xml:space="preserve">
+        <value>Nusgalar boş bolup bilmez</value>
+    </data>
+    <data name="SSDK_SampleSelectionLocationCannotBeEmpty" xml:space="preserve">
+        <value>Nusgalaryň saýlanan ýeri boş bolup bilmez</value>
+    </data>
+    <data name="AK_EmployeesNotFromSameRegion" xml:space="preserve">
+        <value>Bir sebitden däl işgärler</value>
+    </data>
+</root>
