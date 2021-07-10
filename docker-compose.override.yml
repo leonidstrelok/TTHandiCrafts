@@ -3,10 +3,24 @@ version: '3.4'
 services:
   tthandicrafts:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ConnectionStrings__DefaultConnection=Server=${POSTGRES_HOST};Port=${POSTGRES_PORT};Database=${POSTGRES_DB};User Id=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}
     ports:
-      - "80"
-      - "443"
+      - 8800:80
+      - 4455:443
     volumes:
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ./ClientApp:/app
+    networks:
+     - tthandicrafts-network
+
+  postgresdb:
+    ports:
+     - 5432:5432 
+    volumes:
+     - postgres-db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    networks:
+     - tthandicrafts-network

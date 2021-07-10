@@ -1,8 +1,19 @@
 version: '3.4'
 
 services:
-  tthandicrafts:
-    image: ${DOCKER_REGISTRY-}tthandicrafts
-    build:
-      context: .
-      dockerfile: TTHandiCrafts/Dockerfile
+   tthandicrafts:
+     image: tthandicrafts
+     container_name: tthandicrafts
+     restart: always
+
+   postgresdb:
+    container_name: postgresdb
+    image: postgres:latest
+    restart: always
+
+networks:
+  tthandicrafts-network:
+    driver: bridge
+
+volumes:
+  postgres-db-data:
