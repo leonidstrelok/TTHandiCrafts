@@ -1,9 +1,0 @@
-﻿@inject IViewLocalizer Localizer
-
-<div class="site-bar">
-    <ul>
-        <li class="@ManageNavPages.UserProfileNavClass(ViewContext)"><a asp-page="./Profile">@Localizer["Ulanyjynyň profili"]</a></li>
-        <li class="@ManageNavPages.ChangePasswordNavClass(ViewContext)"><a asp-page="./ChangePassword">@Localizer["Açarsöz"]</a></li>
-        <li class="@ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)"><a asp-page="./TwoFactorAuthentication">@Localizer["Iki faktorly hasaba alyş"]</a></li>
-    </ul>
-</div>
