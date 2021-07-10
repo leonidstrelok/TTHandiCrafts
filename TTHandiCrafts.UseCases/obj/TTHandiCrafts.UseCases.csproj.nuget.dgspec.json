@@ -160,6 +160,9 @@
             "projectReferences": {
               "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Infrastructure.Interfaces\\TTHandiCrafts.Infrastructure.Interfaces.csproj": {
                 "projectPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Infrastructure.Interfaces\\TTHandiCrafts.Infrastructure.Interfaces.csproj"
+              },
+              "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Utils\\TTHandiCrafts.Utils.csproj": {
+                "projectPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Utils\\TTHandiCrafts.Utils.csproj"
               }
             }
           }
@@ -207,6 +210,64 @@
               "version": "[5.0.1, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Utils\\TTHandiCrafts.Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Utils\\TTHandiCrafts.Utils.csproj",
+        "projectName": "TTHandiCrafts.Utils",
+        "projectPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Utils\\TTHandiCrafts.Utils.csproj",
+        "packagesPath": "C:\\Users\\leoni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Utils\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leoni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",

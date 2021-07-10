@@ -2,6 +2,7 @@ using System.Reflection.Metadata;
 using TTHandiCrafts.Models.Models.BaseModels;
 using TTHandiCrafts.Models.Models.Products;
 using TTHandiCrafts.Models.Models.Products.Enums;
+using TTHandiCrafts.Models.Models.UserModels.Advertisings;
 
 namespace TTHandiCrafts.Models.Models
 {
@@ -15,12 +16,19 @@ namespace TTHandiCrafts.Models.Models
         /// </summary>
         public byte[] Image { get; set; }
 
-        public int ProductId { get; set; }
+        public int? ProductId { get; set; }
 
         /// <summary>
         /// Идентификатор продукта
         /// </summary>
         public virtual Product Product { get; set; }
+
+        public int? AdvertisingId { get; set; }
+
+        /// <summary>
+        /// Реклама
+        /// </summary>
+        public Advertising Advertising { get; set; }
 
         /// <summary>
         /// Наименование файла

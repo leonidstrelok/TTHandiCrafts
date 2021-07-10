@@ -8,6 +8,7 @@ using TTHandiCrafts.Infrastructure.Interfaces.Interfaces;
 using TTHandiCrafts.Models.Models;
 using TTHandiCrafts.Models.Models.Products;
 using TTHandiCrafts.Models.Models.Products.Enums;
+using TTHandiCrafts.UseCases.Commons.Extensions;
 using TTHandiCrafts.UseCases.Modules.Products.Dtos;
 using TTHandiCrafts.Utils;
 
@@ -38,40 +39,13 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct
 
             product.CreatedDate = SystemTime.Now();
 
-
-            await LoadDocument(request);
-            
             await dbContext.AddAsync(product);
             await dbContext.SaveChangesAsync();
+
+            await product.LoadDocumentsAsync(request, product.Id, dbContext);
+
+
             return mapper.Map<ProductDto>(product);
         }
-
-       
-
-        private async Task LoadDocument(CreateProductCommand request)
-        {
-            if (request.Images != null)
-            {
-                var binarysData = new List<BinaryData>();
-                foreach (var versionFile in request.Images)
-                {
-                    Stream document = versionFile.Stream;
-                    document.Position = 0;
-
-                    using var ms = new MemoryStream();
-                    await document.CopyToAsync(ms);
-                    
-                    binarysData.Add(new BinaryData()
-                    {
-                        Image = ms.ToArray(),
-                        FileName = versionFile.FileName
-                    });
-                }
-
-                await dbContext.Set<BinaryData>().AddRangeAsync(binarysData);
-                await dbContext.SaveChangesAsync();
-            }
-        }
-        
     }
 }

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using TTHandiCrafts.Infrastructure.Interfaces.Interfaces;
+using TTHandiCrafts.Models.Models;
 using TTHandiCrafts.Models.Models.UserModels.Advertisings;
 
 namespace TTHandiCrafts.UseCases.Modules.Admins.Commands.AdvertisingCommands.DeleteAdvertising
@@ -24,7 +25,10 @@ namespace TTHandiCrafts.UseCases.Modules.Admins.Commands.AdvertisingCommands.Del
         protected override async Task Handle(DeleteAdvertisingCommand request, CancellationToken cancellationToken)
         {
             var advertising = await dbContext.Set<Advertising>().FirstAsync(p => p.Id == request.Id);
+            var binaryData = await dbContext.Set<BinaryData>()
+                .FirstOrDefaultAsync(p => p.AdvertisingId == advertising.Id);
             dbContext.Set<Advertising>().Remove(advertising);
+            dbContext.Set<BinaryData>().Remove(binaryData);
             await dbContext.SaveChangesAsync();
         }
     }

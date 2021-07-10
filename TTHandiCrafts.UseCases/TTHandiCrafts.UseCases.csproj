@@ -20,7 +20,6 @@
       <Folder Include="Modules\Accounts\Dtos" />
       <Folder Include="Modules\Accounts\Queries" />
       <Folder Include="Modules\Admins\Commands\AdvertisingCommands" />
-      <Folder Include="Modules\Admins\Dtos" />
       <Folder Include="Modules\Members\Commands" />
       <Folder Include="Modules\Members\Dtos" />
       <Folder Include="Modules\Members\Queries" />

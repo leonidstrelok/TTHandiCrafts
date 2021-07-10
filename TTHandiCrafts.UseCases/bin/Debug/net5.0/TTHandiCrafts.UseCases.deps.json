@@ -16,7 +16,8 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.5",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.Extensions.DependencyInjection": "5.0.1",
-          "TTHandiCrafts.Infrastructure.Interfaces": "1.0.0"
+          "TTHandiCrafts.Infrastructure.Interfaces": "1.0.0",
+          "TTHandiCrafts.Utils": "1.0.0"
         },
         "runtime": {
           "TTHandiCrafts.UseCases.dll": {}
@@ -234,6 +235,11 @@
         "runtime": {
           "TTHandiCrafts.Models.dll": {}
         }
+      },
+      "TTHandiCrafts.Utils/1.0.0": {
+        "runtime": {
+          "TTHandiCrafts.Utils.dll": {}
+        }
       }
     }
   },
@@ -410,6 +416,11 @@
       "sha512": ""
     },
     "TTHandiCrafts.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TTHandiCrafts.Utils/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

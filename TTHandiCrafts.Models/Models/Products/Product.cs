@@ -50,5 +50,10 @@ namespace TTHandiCrafts.Models.Models.Products
         /// Сотрудник
         /// </summary>
         public virtual Member Member { get; set; }
+
+        /// <summary>
+        /// Статус продукта
+        /// </summary>
+        public Status Status { get; set; }
     }
 }

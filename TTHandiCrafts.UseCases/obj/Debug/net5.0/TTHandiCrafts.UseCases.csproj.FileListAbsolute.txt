@@ -15,3 +15,5 @@ C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\ref\TTHandiCrafts.UseCases.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.pdb
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Utils.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Utils.pdb

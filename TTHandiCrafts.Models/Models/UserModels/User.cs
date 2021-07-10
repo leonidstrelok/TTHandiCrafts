@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TTHandiCrafts.Models.Models.BaseModels;
+using TTHandiCrafts.Models.Models.Products;
 using TTHandiCrafts.Models.Models.SharedEnums;
 
 namespace TTHandiCrafts.Models.Models.UserModels
@@ -39,9 +40,17 @@ namespace TTHandiCrafts.Models.Models.UserModels
         /// Телефонный номер
         /// </summary>
         public string Phone { get; set; }
+
         /// <summary>
         /// Почта
         /// </summary>
         public string Email { get; set; }
+
+        public int BasketId { get; set; }
+
+        /// <summary>
+        /// Корзина
+        /// </summary>
+        public virtual Basket Basket { get; set; }
     }
 }

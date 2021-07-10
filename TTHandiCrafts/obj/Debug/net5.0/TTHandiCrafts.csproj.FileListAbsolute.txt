@@ -481,3 +481,6 @@ C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts\obj\Debug\net5.0\TTHand
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts\obj\Debug\net5.0\ref\TTHandiCrafts.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts\obj\Debug\net5.0\TTHandiCrafts.pdb
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts\obj\Debug\net5.0\TTHandiCrafts.genruntimeconfig.cache
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts\bin\Debug\net5.0\TTHandiCrafts.xml
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts\bin\Debug\net5.0\TTHandiCrafts.Utils.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts\bin\Debug\net5.0\TTHandiCrafts.Utils.pdb

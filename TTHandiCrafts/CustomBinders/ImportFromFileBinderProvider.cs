@@ -1,7 +1,10 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using TTHandiCrafts.UseCases.Modules.Admins.Commands.AdvertisingCommands.CreateAdvertising;
+using TTHandiCrafts.UseCases.Modules.Admins.Commands.AdvertisingCommands.UpdateAdvertising;
 using TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct;
+using TTHandiCrafts.UseCases.Modules.Products.Commands.UpdateProduct;
 
 namespace TTHandiCrafts.CustomBinders
 {
@@ -15,6 +18,21 @@ namespace TTHandiCrafts.CustomBinders
             }
             
             if (context.Metadata.ModelType == typeof(CreateProductCommand))
+            {
+                return new BinderTypeModelBinder(typeof(ImportFromFileBinder));
+            }
+            
+            if (context.Metadata.ModelType == typeof(CreateAdvertisingCommand))
+            {
+                return new BinderTypeModelBinder(typeof(ImportFromFileBinder));
+            }
+            
+            if (context.Metadata.ModelType == typeof(UpdateAdvertisingCommand))
+            {
+                return new BinderTypeModelBinder(typeof(ImportFromFileBinder));
+            }
+
+            if (context.Metadata.ModelType == typeof(UpdateProductCommand))
             {
                 return new BinderTypeModelBinder(typeof(ImportFromFileBinder));
             }

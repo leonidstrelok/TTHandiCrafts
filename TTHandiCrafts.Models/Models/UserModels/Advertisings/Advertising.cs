@@ -14,7 +14,7 @@ namespace TTHandiCrafts.Models.Models.UserModels.Advertisings
         /// <summary>
         /// Фотография рекламы
         /// </summary>
-        public byte[] Image { get; set; }
+        public BinaryData Image { get; set; }
         /// <summary>
         /// Ссылка для перехода
         /// </summary>

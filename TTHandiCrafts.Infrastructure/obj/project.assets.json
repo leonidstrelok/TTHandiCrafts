@@ -2130,13 +2130,24 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.5",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.Extensions.DependencyInjection": "5.0.1",
-          "TTHandiCrafts.Infrastructure.Interfaces": "1.0.0"
+          "TTHandiCrafts.Infrastructure.Interfaces": "1.0.0",
+          "TTHandiCrafts.Utils": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TTHandiCrafts.UseCases.dll": {}
         },
         "runtime": {
           "bin/placeholder/TTHandiCrafts.UseCases.dll": {}
+        }
+      },
+      "TTHandiCrafts.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/TTHandiCrafts.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TTHandiCrafts.Utils.dll": {}
         }
       }
     }
@@ -7131,6 +7142,11 @@
       "type": "project",
       "path": "../TTHandiCrafts.UseCases/TTHandiCrafts.UseCases.csproj",
       "msbuildProject": "../TTHandiCrafts.UseCases/TTHandiCrafts.UseCases.csproj"
+    },
+    "TTHandiCrafts.Utils/1.0.0": {
+      "type": "project",
+      "path": "../TTHandiCrafts.Utils/TTHandiCrafts.Utils.csproj",
+      "msbuildProject": "../TTHandiCrafts.Utils/TTHandiCrafts.Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {

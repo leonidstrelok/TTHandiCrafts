@@ -30,3 +30,5 @@ C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debu
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\ref\TTHandiCrafts.Infrastructure.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\TTHandiCrafts.Infrastructure.pdb
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\TTHandiCrafts.Infrastructure.genruntimeconfig.cache
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\bin\Debug\net5.0\TTHandiCrafts.Utils.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\bin\Debug\net5.0\TTHandiCrafts.Utils.pdb

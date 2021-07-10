@@ -282,6 +282,16 @@
         "runtime": {
           "bin/placeholder/TTHandiCrafts.Models.dll": {}
         }
+      },
+      "TTHandiCrafts.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/TTHandiCrafts.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TTHandiCrafts.Utils.dll": {}
+        }
       }
     }
   },
@@ -897,6 +907,11 @@
       "type": "project",
       "path": "../TTHandiCrafts.Models/TTHandiCrafts.Models.csproj",
       "msbuildProject": "../TTHandiCrafts.Models/TTHandiCrafts.Models.csproj"
+    },
+    "TTHandiCrafts.Utils/1.0.0": {
+      "type": "project",
+      "path": "../TTHandiCrafts.Utils/TTHandiCrafts.Utils.csproj",
+      "msbuildProject": "../TTHandiCrafts.Utils/TTHandiCrafts.Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -909,7 +924,8 @@
       "Microsoft.AspNetCore.Http.Features >= 5.0.5",
       "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.Extensions.DependencyInjection >= 5.0.1",
-      "TTHandiCrafts.Infrastructure.Interfaces >= 1.0.0"
+      "TTHandiCrafts.Infrastructure.Interfaces >= 1.0.0",
+      "TTHandiCrafts.Utils >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -946,6 +962,9 @@
           "projectReferences": {
             "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Infrastructure.Interfaces\\TTHandiCrafts.Infrastructure.Interfaces.csproj": {
               "projectPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Infrastructure.Interfaces\\TTHandiCrafts.Infrastructure.Interfaces.csproj"
+            },
+            "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Utils\\TTHandiCrafts.Utils.csproj": {
+              "projectPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Utils\\TTHandiCrafts.Utils.csproj"
             }
           }
         }
