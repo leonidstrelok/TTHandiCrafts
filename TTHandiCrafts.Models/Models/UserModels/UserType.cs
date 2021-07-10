@@ -1,4 +1,4 @@
-namespace TTHandiCrafts.Models.Models
+namespace TTHandiCrafts.Models.Models.UserModels
 {
     /// <summary>
     /// Тип работника

@@ -5,6 +5,7 @@ namespace TTHandiCrafts.Models.Models.Products.Enums
     /// </summary>
     public enum CategoryType
     {
+        All,
         /// <summary>
         /// Традиционные изделия
         /// </summary>

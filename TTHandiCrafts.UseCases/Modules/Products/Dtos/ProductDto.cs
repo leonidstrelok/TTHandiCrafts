@@ -1,11 +1,17 @@
-using System.Collections.Generic;
-using TTHandiCrafts.Models.Models.BaseModels;
+using AutoMapper;
+using TTHandiCrafts.Models.Models.Products;
 using TTHandiCrafts.Models.Models.Products.Enums;
 
-namespace TTHandiCrafts.Models.Models.Products
+namespace TTHandiCrafts.UseCases.Modules.Products.Dtos
 {
-    public abstract class Product : BaseEntity
+    public class ProductDto : Profile
     {
+        public ProductDto()
+        {
+            CreateMap<Product, ProductDto>();
+        }
+
+
         /// <summary>
         /// Наименование продукта
         /// </summary>
@@ -24,7 +30,7 @@ namespace TTHandiCrafts.Models.Models.Products
         /// <summary>
         /// Фотография изделия
         /// </summary>
-        public virtual ICollection<BinaryData> Images { get; set; }
+        public byte[]? Image { get; set; }
 
         /// <summary>
         /// Комментарий для изделия

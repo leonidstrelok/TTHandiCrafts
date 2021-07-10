@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TTHandiCrafts.Models.Models.BaseModels;
 using TTHandiCrafts.Models.Models.Products;
 
-namespace TTHandiCrafts.Models.Models
+namespace TTHandiCrafts.Models.Models.UserModels
 {
     /// <summary>
     /// Работа рукодельниц или ремесленников
@@ -16,7 +16,7 @@ namespace TTHandiCrafts.Models.Models
         /// <summary>
         /// Изделия
         /// </summary>
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
         
     }
 }

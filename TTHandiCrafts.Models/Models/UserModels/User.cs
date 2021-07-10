@@ -1,18 +1,24 @@
+using System;
 using System.Collections.Generic;
 using TTHandiCrafts.Models.Models.BaseModels;
 using TTHandiCrafts.Models.Models.SharedEnums;
 
-namespace TTHandiCrafts.Models.Models
+namespace TTHandiCrafts.Models.Models.UserModels
 {
     /// <summary>
     /// Пользователь
     /// </summary>
-    public class User : BaseEntity
+    public abstract class User : BaseEntity
     {
         /// <summary>
         /// Имя
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Дата создания
+        /// </summary>
+        public DateTime CreatedDate { get; set; }
 
         /// <summary>
         /// Тип пользователя
@@ -30,8 +36,8 @@ namespace TTHandiCrafts.Models.Models
         public byte[]? Image { get; set; }
 
         /// <summary>
-        /// Пользовательские изделия
+        /// Контактные данные 
         /// </summary>
-        public ICollection<UserWork> UserWorks { get; set; }
+        public virtual ICollection<Contact> Contacts { get; set; }
     }
 }

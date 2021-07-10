@@ -16,13 +16,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="MappingProfilesBase" />
       <Folder Include="Modules\Accounts\Commands" />
-      <Folder Include="Modules\Accounts\Models" />
+      <Folder Include="Modules\Accounts\Dtos" />
       <Folder Include="Modules\Accounts\Queries" />
-      <Folder Include="Modules\Products\Commands\UpdateProduct" />
-      <Folder Include="Modules\Products\Models" />
-      <Folder Include="Modules\Products\Queries" />
+      <Folder Include="Modules\Admins\Commands\AdvertisingCommands" />
+      <Folder Include="Modules\Admins\Dtos" />
+      <Folder Include="Modules\Members\Commands" />
+      <Folder Include="Modules\Members\Dtos" />
+      <Folder Include="Modules\Members\Queries" />
     </ItemGroup>
 
     <ItemGroup>

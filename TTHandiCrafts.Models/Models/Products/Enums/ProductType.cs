@@ -6,6 +6,10 @@ namespace TTHandiCrafts.Models.Models.Products.Enums
     public enum ProductType
     {
         /// <summary>
+        /// Все
+        /// </summary>
+        All,
+        /// <summary>
         /// Текстиль
         /// </summary>
         Textile,
