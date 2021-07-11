@@ -24,11 +24,11 @@ namespace TTHandiCrafts.Controllers.SharedControllers.AccountControllers
     {
         private readonly IMediator mediator;
         private readonly Interfaces.IAuthorizationService authorizationService;
-        private readonly UserManager<ApplicationUser> userManager;
+        private readonly UserManager<IdentityUser> userManager;
         private readonly IEmailSender emailSender;
 
         ///private UserContext db;
-        public AccountController(IMediator mediator, Interfaces.IAuthorizationService authorizationService, UserManager<ApplicationUser> userManager, IEmailSender emailSender)
+        public AccountController(IMediator mediator, Interfaces.IAuthorizationService authorizationService, UserManager<IdentityUser> userManager, IEmailSender emailSender)
         {
             this.mediator = mediator;
             this.authorizationService = authorizationService;
@@ -53,7 +53,7 @@ namespace TTHandiCrafts.Controllers.SharedControllers.AccountControllers
         /// <returns></returns>
         [AllowAnonymous]
         [HttpPost("Register")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Register([FromBody] Register register)
         {
 

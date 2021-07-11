@@ -19,6 +19,7 @@ namespace TTHandiCrafts.Infrastructure.Identities.Extensions
                 .AddApiAuthorization<IdentityUser, TTHandiCraftsIdentityDbContext>(options =>
                     ConfigureApiAuthorization(options, configuration))
                 .AddProfileService<DefaultProfileService>();
+           
 
             var tokenValidIssuers = configuration.GetSection("IdentityServer:TokenValidationParameters:ValidIssuers")
                 .Get<string[]>();

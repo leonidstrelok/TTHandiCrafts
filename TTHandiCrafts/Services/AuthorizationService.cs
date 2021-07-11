@@ -15,12 +15,12 @@ namespace TTHandiCrafts.Services
 {
     public class AuthorizationService : IAuthorizationService
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<AuthorizationService> _logger;
-        public AuthorizationService(SignInManager<ApplicationUser> signInManager,
+        public AuthorizationService(SignInManager<IdentityUser> signInManager,
             ILogger<AuthorizationService> logger,
-            UserManager<ApplicationUser> userManager)
+            UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
