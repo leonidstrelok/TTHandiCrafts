@@ -3,6 +3,7 @@ using System.IO;
 using System.Threading.Tasks;
 using TTHandiCrafts.Infrastructure.Interfaces.Interfaces;
 using TTHandiCrafts.Models.Models;
+using TTHandiCrafts.Models.Models.Products;
 
 namespace TTHandiCrafts.UseCases.Commons.Extensions
 {
@@ -46,31 +47,28 @@ namespace TTHandiCrafts.UseCases.Commons.Extensions
         /// <param name="request"></param>
         /// <param name="id"></param>
         /// <param name="dbContext"></param>
-        public static async Task LoadDocumentsAsync(this object obj, dynamic request, int id,
+        public static async Task<ICollection<BinaryData>> LoadDocumentsAsync(this object obj, dynamic request,
+            Product product,
             IApplicationDbContext dbContext)
         {
-            if (request.Images != null)
+            var binarysData = new List<BinaryData>();
+            foreach (var versionFile in request.Images)
             {
-                var binarysData = new List<BinaryData>();
-                foreach (var versionFile in request.Images)
+                Stream document = versionFile.Stream;
+                document.Position = 0;
+
+                using var ms = new MemoryStream();
+                await document.CopyToAsync(ms);
+
+                binarysData.Add(new BinaryData()
                 {
-                    Stream document = versionFile.Stream;
-                    document.Position = 0;
-
-                    using var ms = new MemoryStream();
-                    await document.CopyToAsync(ms);
-
-                    binarysData.Add(new BinaryData()
-                    {
-                        Image = ms.ToArray(),
-                        FileName = versionFile.FileName,
-                        ProductId = id
-                    });
-                }
-
-                await dbContext.Set<BinaryData>().AddRangeAsync(binarysData);
-                await dbContext.SaveChangesAsync();
+                    Image = ms.ToArray(),
+                    FileName = versionFile.FileName,
+                    Product = product
+                });
             }
+
+            return binarysData;
         }
     }
 }

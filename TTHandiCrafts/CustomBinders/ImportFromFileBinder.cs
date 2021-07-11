@@ -51,11 +51,11 @@ namespace TTHandiCrafts.CustomBinders
         private void VerifyAndAddValueForType(IFormFileCollection formFiles, dynamic propertyName, dynamic model)
         {
             if (formFiles.Any(p =>
-                p.Name.Equals(ToLowerFirst(propertyName.Name)) &&
+                p.Name.Equals(propertyName.Name) &&
                 typeof(ICollection<VersionFile>).IsAssignableFrom(propertyName.PropertyType)))
             {
                 propertyName.SetValue(model,
-                    formFiles.Where(p => p.Name.Equals(ToLowerFirst(propertyName.Name)))
+                    formFiles.Where(p => p.Name.Equals(propertyName.Name))
                         .Select(p =>
                             new VersionFile
                             {
@@ -65,8 +65,8 @@ namespace TTHandiCrafts.CustomBinders
             }
             else if (propertyName.PropertyType == typeof(VersionFile))
             {
-                var stream = formFiles[ToLowerFirst(propertyName.Name)].OpenReadStream();
-                var fileName = formFiles[ToLowerFirst(propertyName.Name)].FileName;
+                var stream = formFiles[propertyName.Name].OpenReadStream();
+                var fileName = formFiles[propertyName.Name].FileName;
                 propertyName.SetValue(model, new VersionFile()
                 {
                     Stream = stream,

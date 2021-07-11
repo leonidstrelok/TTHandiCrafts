@@ -20,10 +20,10 @@ namespace TTHandiCrafts.UseCases.Commons.Behaviours
         public async Task Process(TRequest request, CancellationToken cancellationToken)
         {
             var requestName = typeof(TRequest).Name;
-            var userId = _currentUserService.UserId;
+            // var userId = _currentUserService.UserId;
             
-            _logger.LogInformation("TTHandiCrafts Request: {Name} {@UserId} {@Request}",
-                requestName, userId, request);
+            _logger.LogInformation("TTHandiCrafts Request: {Name} {@Request}",
+                requestName, request);
         }
     }
 }

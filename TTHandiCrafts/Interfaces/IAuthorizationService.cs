@@ -7,5 +7,7 @@ namespace TTHandiCrafts.Interfaces
     {
         Task Auhtorization(Login login);
         Task<bool> Registration(Register register);
+        Task<string> ResetPasswordByEmail(string email);
+        Task PasswordReset(string token);
     }
 }

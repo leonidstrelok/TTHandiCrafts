@@ -16,7 +16,7 @@ namespace TTHandiCrafts.Models.Models.UserModels.Advertisings
         /// <summary>
         /// Фотография рекламы
         /// </summary>
-        public BinaryData Image { get; set; }
+        public virtual BinaryData Image { get; set; }
 
         /// <summary>
         /// Крайний срок завершение рекламы

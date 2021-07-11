@@ -20,6 +20,5 @@ namespace TTHandiCrafts.Models.Models.Products
         public virtual ICollection<Product> Products { get; set; }
 
         public int UserId { get; set; }
-        public User User { get; set; }
     }
 }

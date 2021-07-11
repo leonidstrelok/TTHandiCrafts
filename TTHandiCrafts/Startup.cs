@@ -12,6 +12,7 @@ using TTHandiCrafts.CustomBinders;
 using TTHandiCrafts.Extensions;
 using TTHandiCrafts.Infrastructure;
 using TTHandiCrafts.Infrastructure.Interfaces.Interfaces;
+using TTHandiCrafts.Interfaces;
 using TTHandiCrafts.Models;
 using TTHandiCrafts.Services;
 using TTHandiCrafts.UseCases;
@@ -50,6 +51,8 @@ namespace TTHandiCrafts
 
             services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
             services.AddHttpContextAccessor();
+            services.AddScoped<IAuthorizationService, AuthorizationService>();
+            
             services.AddScoped<ICurrentUserService, CurrentUserService>();
             services.AddScoped<IEmailSender, MailKitEmailSender>();
             services.Configure<EmailOptions>(Configuration.GetSection("EmailOptions"));

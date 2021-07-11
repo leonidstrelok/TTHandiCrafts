@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TTHandiCrafts.Infrastructure.Identities;
 
-namespace TTHandiCrafts.Infrastructure.Migrations.TTHandiCraftsIdentityDb
+namespace TTHandiCrafts.Infrastructure.Migrations
 {
     [DbContext(typeof(TTHandiCraftsIdentityDbContext))]
-    [Migration("20210710092807_init")]
+    [Migration("20210711085957_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -322,6 +322,205 @@ namespace TTHandiCrafts.Infrastructure.Migrations.TTHandiCraftsIdentityDb
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.BinaryData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int?>("AdvertisingId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("text");
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("bytea");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdvertisingId")
+                        .IsUnique();
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("BinaryData");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.Products.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("Count")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Basket");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.Products.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int?>("BasketId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("CategoryType")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<bool>("IsFavorites")
+                        .HasColumnType("boolean");
+
+                    b.Property<int?>("MemberId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<int>("ProductType")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("ToMake")
+                        .HasColumnType("boolean");
+
+                    b.Property<int?>("UserWorkId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("Vip")
+                        .HasColumnType("boolean");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("MemberId");
+
+                    b.HasIndex("UserWorkId");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.Advertisings.Advertising", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Advertising");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("BasketId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("BasketId1")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("bytea");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserType")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId1");
+
+                    b.ToTable("User");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("User");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.UserWork", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<double>("Evaluation")
+                        .HasColumnType("double precision");
+
+                    b.Property<int?>("MemberId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MemberId");
+
+                    b.ToTable("UserWork");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.Member", b =>
+                {
+                    b.HasBaseType("TTHandiCrafts.Models.Models.UserModels.User");
+
+                    b.HasDiscriminator().HasValue("Member");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -371,6 +570,81 @@ namespace TTHandiCrafts.Infrastructure.Migrations.TTHandiCraftsIdentityDb
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.BinaryData", b =>
+                {
+                    b.HasOne("TTHandiCrafts.Models.Models.UserModels.Advertisings.Advertising", "Advertising")
+                        .WithOne("Image")
+                        .HasForeignKey("TTHandiCrafts.Models.Models.BinaryData", "AdvertisingId");
+
+                    b.HasOne("TTHandiCrafts.Models.Models.Products.Product", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Advertising");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.Products.Product", b =>
+                {
+                    b.HasOne("TTHandiCrafts.Models.Models.Products.Basket", null)
+                        .WithMany("Products")
+                        .HasForeignKey("BasketId");
+
+                    b.HasOne("TTHandiCrafts.Models.Models.UserModels.Member", "Member")
+                        .WithMany()
+                        .HasForeignKey("MemberId");
+
+                    b.HasOne("TTHandiCrafts.Models.Models.UserModels.UserWork", null)
+                        .WithMany("Products")
+                        .HasForeignKey("UserWorkId");
+
+                    b.Navigation("Member");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.User", b =>
+                {
+                    b.HasOne("TTHandiCrafts.Models.Models.Products.Basket", "Basket")
+                        .WithMany()
+                        .HasForeignKey("BasketId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.UserWork", b =>
+                {
+                    b.HasOne("TTHandiCrafts.Models.Models.UserModels.Member", null)
+                        .WithMany("UserWorks")
+                        .HasForeignKey("MemberId");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.Products.Basket", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.Products.Product", b =>
+                {
+                    b.Navigation("Images");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.Advertisings.Advertising", b =>
+                {
+                    b.Navigation("Image");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.UserWork", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("TTHandiCrafts.Models.Models.UserModels.Member", b =>
+                {
+                    b.Navigation("UserWorks");
                 });
 #pragma warning restore 612, 618
         }

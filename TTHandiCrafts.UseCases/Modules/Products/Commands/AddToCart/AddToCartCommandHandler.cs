@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -25,9 +26,16 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Commands.AddToCart
 
         public async Task<int> Handle(AddToCartCommand request, CancellationToken cancellationToken)
         {
-            var product = await dbContext.Set<Product>().FirstOrDefaultAsync(p => p.Id == request.Id);
+            var product = await dbContext.Set<Product>().FirstOrDefaultAsync(p => p.Id == request.ProductId);
             var user = await dbContext.Set<User>().FirstOrDefaultAsync(p => p.Id == request.Id);
-            // user.Basket
+            user.Basket = new Basket()
+            {
+                UserId = 1,
+                Count = user.Basket.Products.Count,
+            };
+            user.Basket.Products.Add(product);
+
+            await dbContext.SaveChangesAsync();
             return 0;
         }
     }

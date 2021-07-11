@@ -28,7 +28,7 @@ namespace TTHandiCrafts.Models.Models
         /// <summary>
         /// Реклама
         /// </summary>
-        public Advertising Advertising { get; set; }
+        public virtual Advertising Advertising { get; set; }
 
         /// <summary>
         /// Наименование файла

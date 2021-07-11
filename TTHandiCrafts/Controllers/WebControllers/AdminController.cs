@@ -14,7 +14,7 @@ using TTHandiCrafts.UseCases.Modules.Admins.Queries.AdvertisingQueries.GetAllAdv
 namespace TTHandiCrafts.Controllers.WebControllers
 {
     [ApiController]
-    [Route("api/[contoller]")]
+    [Route("api/[controller]")]
     [SwaggerTag("API для работы с админом")]
     public class AdminController : ControllerBase
     {

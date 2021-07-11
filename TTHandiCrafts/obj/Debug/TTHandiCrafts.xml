@@ -9,6 +9,23 @@
             Контроллер для авторизации и регистрации
             </summary>
         </member>
+        <member name="M:TTHandiCrafts.Controllers.SharedControllers.AccountControllers.AccountController.#ctor(MediatR.IMediator,TTHandiCrafts.Interfaces.IAuthorizationService,Microsoft.AspNetCore.Identity.UserManager{Microsoft.AspNetCore.Identity.IdentityUser},TTHandiCrafts.Infrastructure.Interfaces.Interfaces.IEmailSender)">
+            private UserContext db;
+        </member>
+        <member name="M:TTHandiCrafts.Controllers.SharedControllers.AccountControllers.AccountController.Login(TTHandiCrafts.Models.Login)">
+            <summary>
+            Логин в портал
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TTHandiCrafts.Controllers.SharedControllers.AccountControllers.AccountController.Register(TTHandiCrafts.Models.Register)">
+            <summary>
+            Регистрация в портал 
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
         <member name="M:TTHandiCrafts.Controllers.WebControllers.ProductController.GetAllProducts(TTHandiCrafts.Infrastructure.DevExpress.Options.DataSourceLoadOptions)">
             <summary>
             Получение всех изделий
@@ -63,6 +80,667 @@
             Миграция всех данных при запуске приложения
             </summary>
             <param name="scope"></param>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.And">
+            <summary>
+              Looks up a localized string similar to и.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.Authorization">
+            <summary>
+              Looks up a localized string similar to Авторизация.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.Enter_your">
+            <summary>
+              Looks up a localized string similar to Введите свой.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.Forgot_your_password">
+            <summary>
+              Looks up a localized string similar to Забыли пароль?.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.Log_in">
+            <summary>
+              Looks up a localized string similar to Вход.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.Password">
+            <summary>
+              Looks up a localized string similar to Пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.Remember_me">
+            <summary>
+              Looks up a localized string similar to Запомнить меня.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.That_login_in_portal">
+            <summary>
+              Looks up a localized string similar to чтобы войти в портал.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Login.UserName">
+            <summary>
+              Looks up a localized string similar to Логин.
+            </summary>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa._2FA">
+            <summary>
+              Looks up a localized string similar to Двухфакторная аутентификация.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa.AuthenticatorCode">
+            <summary>
+              Looks up a localized string similar to Код аутентификатора.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa.DontHaveAccessAuthenticator">
+            <summary>
+              Looks up a localized string similar to У вас нет доступа к устройству аутентификации? Вы можете.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa.Log_in">
+            <summary>
+              Looks up a localized string similar to Войти.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa.LogInWithRecoveryCode">
+            <summary>
+              Looks up a localized string similar to войдите в систему с кодом восстановления.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa.ProtectedAuthenticatopApp">
+            <summary>
+              Looks up a localized string similar to Ваш логин защищен с помощью приложения Аутентификатора. Введите код аутентификации ниже.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWith2fa.Remember_this_machine">
+            <summary>
+              Looks up a localized string similar to Запомнить это устройство.
+            </summary>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWithRecoveryCode">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWithRecoveryCode.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWithRecoveryCode.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWithRecoveryCode.Log_in">
+            <summary>
+              Looks up a localized string similar to Войти.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWithRecoveryCode.Recovery_code_verification">
+            <summary>
+              Looks up a localized string similar to Проверка кода восстановления.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWithRecoveryCode.RecoveryCode">
+            <summary>
+              Looks up a localized string similar to Код восстановления.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.LoginWithRecoveryCode.You_have_requested_login_with_recovery_code">
+            <summary>
+              Looks up a localized string similar to Вы запросили вход в систему с кодом восстановления. Этот логин не будет сохранен, пока вы не предоставите код приложения Аутентификатор при входе в систему или отключении 2ФА и повторном входе..
+            </summary>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Logout">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Logout.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Logout.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Logout.LogoutTitle">
+            <summary>
+              Looks up a localized string similar to Выход.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.Logout.You_have_successfully_logged_out_of_the_application">
+            <summary>
+              Looks up a localized string similar to Вы успешно вышли из системы.
+            </summary>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.MustChangePassword">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.MustChangePassword.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.MustChangePassword.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.MustChangePassword.ChangePassword">
+            <summary>
+              Looks up a localized string similar to Сменить пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.MustChangePassword.ConfirmPassword">
+            <summary>
+              Looks up a localized string similar to Подтверждение пароля.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.MustChangePassword.Password">
+            <summary>
+              Looks up a localized string similar to Пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.MustChangePassword.Set_new_password">
+            <summary>
+              Looks up a localized string similar to Установите новый пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.MustChangePassword.Your_must_change_your_password">
+            <summary>
+              Looks up a localized string similar to Необходимо сменить пароль..
+            </summary>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPassword">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPassword.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPassword.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPassword.ConfirmPassword">
+            <summary>
+              Looks up a localized string similar to Подтверждение пароля.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPassword.Password">
+            <summary>
+              Looks up a localized string similar to Пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPassword.Reset">
+            <summary>
+              Looks up a localized string similar to Сбросить.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPassword.Reset_password">
+            <summary>
+              Looks up a localized string similar to Сброс пароля.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPassword.UserName">
+            <summary>
+              Looks up a localized string similar to Логин.
+            </summary>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPasswordConfirmation">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPasswordConfirmation.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPasswordConfirmation.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPasswordConfirmation.click_here_to_log_in">
+            <summary>
+              Looks up a localized string similar to нажмите здесь, чтобы войти в систему.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPasswordConfirmation.Succedded">
+            <summary>
+              Looks up a localized string similar to Успешно.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.Areas.Identity.Pages.Account.ResetPasswordConfirmation.Your_password_has_been_reset__Please">
+            <summary>
+              Looks up a localized string similar to Ваш пароль был сброшен. Пожалуйста.
+            </summary>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.DataAnotationResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.CompareAttribute_MustMatch">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos;  и &apos;{1}&apos; не совпадают.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.EmailAddressAttribute_Invalid">
+            <summary>
+              Looks up a localized string similar to Поле {0} не является действующим электронным адресом  {1}.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.MaxLengthAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to Поле {0} должно быть в виде ряда или строя с максимальной длиной  {1}.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.MinLengthAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to Поле {0} должно быть в виде ряда или строя с минимальной длиной  {1}.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.Password">
+            <summary>
+              Looks up a localized string similar to Пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.PhoneAttribute_Invalid">
+            <summary>
+              Looks up a localized string similar to Поле {0} не является действующим телефонным номером.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.RegularExpressionAttribute_Empty_Pattern">
+            <summary>
+              Looks up a localized string similar to Пример должен быть построен в виде действующего стандартного выражения.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.RequiredAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to Требуется поле {0}.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.StringLengthAttribute_InvalidMaxLength">
+            <summary>
+              Looks up a localized string similar to Максимальная длина должна быть неотрицательное целое число.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.StringLengthAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to Поле {0} должно быть в виде  ряда с максимальной длиной  {1}.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.StringLengthAttribute_ValidationErrorIncludingMinimum">
+            <summary>
+              Looks up a localized string similar to Длина {0} должна быть не менее {2} и не более {1} символов..
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.UrlAttribute_Invalid">
+            <summary>
+              Looks up a localized string similar to Поле {0} не является действующим полноценным http, https или ftp URL..
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.DataAnotationResources.UserName">
+            <summary>
+              Looks up a localized string similar to Логин.
+            </summary>
+        </member>
+        <member name="T:TTHandiCrafts.Resources.IdentityResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.ACodeMustBeSuppliedForPasswordReset">
+            <summary>
+              Looks up a localized string similar to Для сброса пароля необходимо ввести код.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.AsitsNotCurrentlyEnabled">
+            <summary>
+              Looks up a localized string similar to поскольку в настоящее время он не включен..
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.AsTheyDoNotHave2FAEnabled">
+            <summary>
+              Looks up a localized string similar to так как они не имеют 2FA включен.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.CannotDisable2FA">
+            <summary>
+              Looks up a localized string similar to Невозможно отключить 2FA для пользователя с идентификатором.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.CannotGenerateRecoveryCodesForUserWithID">
+            <summary>
+              Looks up a localized string similar to Не удается создать коды восстановления для пользователя с идентификатором.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.ClickingHere">
+            <summary>
+              Looks up a localized string similar to Нажмите здесь.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.CodeIsNotShouldBeEmpty">
+            <summary>
+              Looks up a localized string similar to Код не может быть пустым.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.CurrentPassword">
+            <summary>
+              Looks up a localized string similar to Текущий Пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.DisabledSucessfull">
+            <summary>
+              Looks up a localized string similar to 2- факторную авторизацию был отключен. Вы можете включить2- факторную авторизацию при установке приложение для проверки подлинности.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.EmailIsNotShouldBeEmpty">
+            <summary>
+              Looks up a localized string similar to Почта не должна быть пустой.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.InvalidAuthenticatorCodeEnteredForUserWithID">
+            <summary>
+              Looks up a localized string similar to Неверный код аутентификатора, введенный для пользователя с идентификатором &apos;{UserId}&apos;.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.InvalidEmailAddress">
+            <summary>
+              Looks up a localized string similar to Пожалуйста введите валидную почту.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.InvalidLoginAttempt">
+            <summary>
+              Looks up a localized string similar to Неверный логин.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.InvalidRecoveryCodeEntered">
+            <summary>
+              Looks up a localized string similar to Неверный введенный код восстановления.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.NewPassword">
+            <summary>
+              Looks up a localized string similar to Новый пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.OldPassword">
+            <summary>
+              Looks up a localized string similar to Старый пароль.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.PasswordDoNotMatch">
+            <summary>
+              Looks up a localized string similar to Новый пароль и пароль подтверждения не совпадают..
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.PasswordIsNotShouldBeEmpty">
+            <summary>
+              Looks up a localized string similar to Пароль не должен быть пуст.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.PleaseResetYourPasswordBy">
+            <summary>
+              Looks up a localized string similar to Пожалуйста, сбросьте свой пароль с помощью.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.ResetPassword">
+            <summary>
+              Looks up a localized string similar to Сброс пароля.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.TheCurrentBrowserHasBeenForgotten">
+            <summary>
+              Looks up a localized string similar to Текущий браузер был забыт. Когда вы снова войдете в систему из этого браузера вам будет предложено ввести свой код 2fa.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.UnableToLoadTwoFactorAuthenticationUser">
+            <summary>
+              Looks up a localized string similar to Не удается загрузить пользователя с двухфакторной аутентификацией.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.UnableToLoadUserWithID">
+            <summary>
+              Looks up a localized string similar to Не удается загрузить пользователя с идентификатором.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.UnexpectedErrorOccurred">
+            <summary>
+              Looks up a localized string similar to Произошла непредвиденная ошибка при загрузке внешней регистрационной информации для пользователя с идентификатором.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.UnexpectedErrorOccurredDisabling2FAForUserWithID">
+            <summary>
+              Looks up a localized string similar to Произошла непредвиденная ошибка отключение 2FA для пользователя с идентификатором.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.UserNameIsNotShouldBeEmpty">
+            <summary>
+              Looks up a localized string similar to Логин не должен быть пустым.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.VerificationCodeIsInvalid">
+            <summary>
+              Looks up a localized string similar to Неверный код подтверждения.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.YouHaveGeneratedNewRecoveryCodes">
+            <summary>
+              Looks up a localized string similar to Вы создали новые коды восстановления.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.YourAuthenticatorAppHasBeenVerified">
+            <summary>
+              Looks up a localized string similar to Ваше приложение Аутентификатор было проверено.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.YourAuthenticatorAppKeyHasBeenReset">
+            <summary>
+              Looks up a localized string similar to Ваш ключ приложения authenticator был сброшен, вам нужно будет настроить свое приложение authenticator с помощью нового ключа.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.YourPasswordHasBeenChanged">
+            <summary>
+              Looks up a localized string similar to Ваш пароль был изменен.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.YourPasswordHasBeenSet">
+            <summary>
+              Looks up a localized string similar to Ваш пароль уже установлен.
+            </summary>
+        </member>
+        <member name="P:TTHandiCrafts.Resources.IdentityResources.YourProfileHasBeenUpdated">
+            <summary>
+              Looks up a localized string similar to Ваш профиль обновлен.
+            </summary>
+        </member>
+        <member name="T:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.ChangePassword">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.ChangePassword.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.ChangePassword.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.ChangePassword.Change_password">
+            <summary>
+              Looks up a localized string similar to Смена пароля.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.ChangePassword.ConfirmPassword">
+            <summary>
+              Looks up a localized string similar to Подтверждение пароля.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.ChangePassword.NewPassword">
+            <summary>
+              Looks up a localized string similar to Новый пароль.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.ChangePassword.OldPassword">
+            <summary>
+              Looks up a localized string similar to Старый пароль.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.ChangePassword.UpdatePassword">
+            <summary>
+              Looks up a localized string similar to Обновить пароль.
+            </summary>
+        </member>
+        <member name="T:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.And">
+            <summary>
+              Looks up a localized string similar to и.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.AuthenticatorAppSteps">
+            <summary>
+              Looks up a localized string similar to чтобы использовать приложение проверки подлинности выполните следующие действия.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.ConfigureAuthenticatorApp">
+            <summary>
+              Looks up a localized string similar to Конфигурация приложения для аутентификации.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.DownloadTwoFactorAuthenticator">
+            <summary>
+              Looks up a localized string similar to Скачать приложение для двухфакторной аутентификации, как Microsoft Authenticator для.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.For">
+            <summary>
+              Looks up a localized string similar to Для.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.OnceYouHaveScanned">
+            <summary>
+              Looks up a localized string similar to После того, как вы отсканировали QR-код или ввели ключ выше, ваше приложение двухфакторной аутентификации предоставит вам уникальный код. Введите код в поле подтверждения ниже..
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.Or">
+            <summary>
+              Looks up a localized string similar to или.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.ScanQrCode">
+            <summary>
+              Looks up a localized string similar to Сканируйте QR-код или введите этот ключ.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.VerificationCode">
+            <summary>
+              Looks up a localized string similar to Код подтверждения.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.Verify">
+            <summary>
+              Looks up a localized string similar to Проверить.
+            </summary>
+        </member>
+        <member name="P:DSEU.UI.Resources.Areas.Identity.Pages.Account.Manage.EnableAuthenticator.Your2FAAuthenticator">
+            <summary>
+              Looks up a localized string similar to в вашем приложении двухфакторной аутентификации..
+            </summary>
         </member>
     </members>
 </doc>

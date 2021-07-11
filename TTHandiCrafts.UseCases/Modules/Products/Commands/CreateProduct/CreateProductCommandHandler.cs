@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -39,11 +40,13 @@ namespace TTHandiCrafts.UseCases.Modules.Products.Commands.CreateProduct
 
             product.CreatedDate = SystemTime.Now();
 
+           
+
+            var images = await product.LoadDocumentsAsync(request, product, dbContext);
+
+            product.Images = images;
             await dbContext.AddAsync(product);
             await dbContext.SaveChangesAsync();
-
-            await product.LoadDocumentsAsync(request, product.Id, dbContext);
-
 
             return mapper.Map<ProductDto>(product);
         }

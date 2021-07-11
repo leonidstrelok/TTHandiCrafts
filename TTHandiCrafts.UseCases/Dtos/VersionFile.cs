@@ -6,6 +6,7 @@ namespace TTHandiCrafts.UseCases.Dtos
     public class VersionFile
     {
         public Stream Stream { get; set; }
+        public byte[] Image { get; set; }
         public string FileName { get; set; }
     }
 }
