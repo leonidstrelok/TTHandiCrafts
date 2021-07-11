@@ -52,7 +52,11 @@ namespace TTHandiCrafts
                 {
                     configuration.Enrich.FromLogContext().ReadFrom.Configuration(context.Configuration);
                 })
-                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("https://*:6655");
+                });
 
         /// <summary>
         /// Загрузка файлов конфигурации для докера.
