@@ -21,9 +21,7 @@ C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debu
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\TTHandiCrafts.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\TTHandiCrafts.Infrastructure.AssemblyInfo.cs
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\TTHandiCrafts.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\ru\TTHandiCrafts.Infrastructure.resources.cs
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\ru\TTHandiCrafts.Infrastructure.resources.dll
-C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\tk\TTHandiCrafts.Infrastructure.resources.cs
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\tk\TTHandiCrafts.Infrastructure.resources.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\TTHandiCrafts.Infrastructure.csproj.CopyComplete
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.Infrastructure\obj\Debug\net5.0\TTHandiCrafts.Infrastructure.dll
