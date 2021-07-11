@@ -1,4 +1,19 @@
 {
+  "IdentityServer": {
+    "Clients": {
+      "DSEU.UI-prod": {
+        "Profile": "SPA",
+        "RedirectUri": "http://localhost/callback",
+        "LogoutUri": "http://localhost/"
+      }
+    },
+    "TokenValidationParameters": {
+      "ValidIssuers": [ "https://192.168.4.188", "http://localhost:3001" ]
+    },
+    "Key": {
+      "Type": "Development"
+    }
+  },
   "IdentityOptions": {
     "Lockout": {
       "MaxFailedAccessAttempts": 10,

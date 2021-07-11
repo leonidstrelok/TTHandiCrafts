@@ -54,7 +54,7 @@ namespace TTHandiCrafts
             
             services.Configure<IdentityOptions>(Configuration.GetSection("IdentityOptions"));
             
-            //services.AddCors(ConfigureCors);
+            services.AddCors(ConfigureCors);
             
             
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
