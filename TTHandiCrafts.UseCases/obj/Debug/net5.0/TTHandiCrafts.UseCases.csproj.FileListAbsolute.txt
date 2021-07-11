@@ -4,7 +4,9 @@ C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.UseCases.pdb
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Infrastructure.Interfaces.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Models.dll
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Utils.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Infrastructure.Interfaces.pdb
+C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Utils.pdb
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Models.pdb
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.csproj.AssemblyReference.cache
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.GeneratedMSBuildEditorConfig.editorconfig
@@ -15,5 +17,3 @@ C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\ref\TTHandiCrafts.UseCases.dll
 C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\obj\Debug\net5.0\TTHandiCrafts.UseCases.pdb
-C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Utils.dll
-C:\Users\leoni\RiderProjects\TTHandiCrafts\TTHandiCrafts.UseCases\bin\Debug\net5.0\TTHandiCrafts.Utils.pdb
