@@ -14,6 +14,7 @@ namespace TTHandiCrafts.Models.Models.Products
         public string Name { get; set; }
 
         public DateTime CreatedDate { get; set; }
+
         /// <summary>
         /// Нужно ли изготовить 
         /// </summary>
@@ -47,6 +48,11 @@ namespace TTHandiCrafts.Models.Models.Products
         public int? MemberId { get; set; }
 
         /// <summary>
+        /// Продвижение вверх
+        /// </summary>
+        public bool Vip { get; set; }
+
+        /// <summary>
         /// Сотрудник
         /// </summary>
         public virtual Member Member { get; set; }
@@ -55,5 +61,7 @@ namespace TTHandiCrafts.Models.Models.Products
         /// Статус продукта
         /// </summary>
         public Status Status { get; set; }
+
+        
     }
 }

@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj": {}
+    "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj": {
+    "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj",
+        "projectUniqueName": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj",
         "projectName": "TTHandiCrafts.Models",
-        "projectPath": "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj",
-        "packagesPath": "C:\\Users\\Bahtiyar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bahtiyar\\Source\\Repos\\CyberCats\\TTHandiCrafts.Models\\obj\\",
+        "projectPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Models\\TTHandiCrafts.Models.csproj",
+        "packagesPath": "C:\\Users\\leoni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leoni\\RiderProjects\\TTHandiCrafts\\TTHandiCrafts.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bahtiyar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\leoni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\Bahtiyar\\source\\package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

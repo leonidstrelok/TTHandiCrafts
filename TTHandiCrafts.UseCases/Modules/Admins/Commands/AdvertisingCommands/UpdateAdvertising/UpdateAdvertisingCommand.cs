@@ -1,3 +1,4 @@
+using System;
 using MediatR;
 using TTHandiCrafts.UseCases.Dtos;
 using TTHandiCrafts.UseCases.Modules.Admins.Dtos;
@@ -7,6 +8,7 @@ namespace TTHandiCrafts.UseCases.Modules.Admins.Commands.AdvertisingCommands.Upd
     public class UpdateAdvertisingCommand : IRequest<AdvertisingDto>
     {
         public int Id { get; set; }
+
         /// <summary>
         /// Наименование рекламы
         /// </summary>
@@ -16,6 +18,8 @@ namespace TTHandiCrafts.UseCases.Modules.Admins.Commands.AdvertisingCommands.Upd
         /// Фотография рекламы
         /// </summary>
         public VersionFile Image { get; set; }
+
+        public DateTime Deadline { get; set; }
 
         /// <summary>
         /// Ссылка для перехода

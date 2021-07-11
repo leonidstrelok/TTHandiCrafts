@@ -2,6 +2,13 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
+RUN apt-get update \
+    && apt-get install -y --allow-unauthenticated \
+        tzdata \
+     && rm -rf /var/lib/apt/lists/*
+     
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+ENV TZ=Asia/Ashgabat
 EXPOSE 80
 EXPOSE 443
 

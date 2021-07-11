@@ -1,3 +1,4 @@
+using System;
 using MediatR;
 using TTHandiCrafts.UseCases.Dtos;
 using TTHandiCrafts.UseCases.Modules.Admins.Dtos;
@@ -15,6 +16,11 @@ namespace TTHandiCrafts.UseCases.Modules.Admins.Commands.AdvertisingCommands.Cre
         /// Фотография рекламы
         /// </summary>
         public VersionFile Image { get; set; }
+
+        /// <summary>
+        /// Крайний срок
+        /// </summary>
+        public DateTime Deadline { get; set; }
 
         /// <summary>
         /// Ссылка для перехода
